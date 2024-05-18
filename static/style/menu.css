@@ -140,6 +140,8 @@ img {
     height: auto;
 }
 
+
+/*
 input,
 button,
 select,
@@ -164,6 +166,8 @@ address {
     font-style: normal;
 }
 
+*/
+
 html {
     font-size: 10px;
     scroll-behavior: smooth;
@@ -179,6 +183,8 @@ body {
     overflow: hidden;
     height: 300vh;
 }
+
+/*
 
 body.loaded {
     overflow: overlay;
@@ -221,14 +227,19 @@ body.nav-active {
     line-height: var(--lineHeight-2);
 }
 
+/*
+
 .display-1 {
     font-size: var(--fontSize-display-1);
     line-height: var(--lineHeight-1);
 }
+*/ 
 
 .headline-1 {
     font-size: var(--fontSize-headline-1);
 }
+
+/*
 
 .headline-2 {
     font-size: var(--fontSize-headline-2);
@@ -237,7 +248,7 @@ body.nav-active {
 
 .title-1 {
     font-size: var(--fontSize-title-1);
-}
+} */
 
 .title-2 {
     font-size: var(--fontSize-title-2);
@@ -246,6 +257,8 @@ body.nav-active {
 .title-3 {
     font-size: var(--fontSize-title-3);
 }
+
+/*
 
 .title-4 {
     font-size: var(--fontSize-title-4);
@@ -273,6 +286,7 @@ body.nav-active {
     font-size: var(--fontSize-body-4);
 }
 
+*/
 
 
 .label-1 {
