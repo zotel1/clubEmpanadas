@@ -552,3 +552,80 @@ nav {
 .fa-brands {
     font-size: 35px;
 }
+
+@media only screen and (min-width: 234px) and (max-width: 930px) {
+
+    
+     
+     body, html {
+        height: 100%;
+        width: auto;
+        margin: 0%;
+        padding: 0;
+        display: flex;
+            flex-direction: column;
+        
+        
+    }
+
+    .header, .logo {
+        height: auto;
+        /* Ajusta este valor según tus necesidades */
+    }
+
+    .menu {
+        height: auto;
+        /* Ajusta este valor según tus necesidades */
+        overflow-y: scroll;
+        /* Permite el desplazamiento vertical */
+    }
+
+    
+
+    .container {
+        width: auto;
+        height: auto;
+        overflow: auto;
+        /* Permite el desplazamiento */
+    }
+
+     .grid-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        z-index: 1;
+        position: relative;
+        height: auto;
+    }
+
+    .menu-card {
+        width: auto;
+        margin-bottom: 10px;
+        flex-basis: calc(33.33% - 20px);
+            /* Ajusta el valor de 20px según el margen que desees entre las tarjetas */
+        z-index: 1;
+    }
+
+    ::before {
+        display: none;
+    }
+
+    /* Oculta el texto y el precio */
+    .card-text,
+    .title-2,
+    .redes {
+        display: none;
+    }
+    .section {
+        height: auto;
+    }
+
+    .footer {
+        padding: 20px;
+        margin-top: auto;
+        height: 30px;
+    }
+}
+    
+    
+
