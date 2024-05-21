@@ -614,7 +614,7 @@ nav {
 
     /* Oculta el texto y el precio */
     .card-text,
-    .title-2,
+    .title-2, .badge, .label-1,
     .redes {
         display: none;
     }
