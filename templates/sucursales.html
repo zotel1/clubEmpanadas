@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="seccion sucursales Club de empanadas">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/style/sucursales.css">
+    <title>Sucursales</title>
+    <link rel="shortcut icon" href="/static/img/favicom/icons8-kawaii-taco-16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2da593c37d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    
 </head>
+
 <body>
     <header class="header">
-        
+
         <nav>
             <div class="logo">
                 <img src="/static/img/club de empanadas.png" alt="logo empanadas">
-    
+
             </div>
-    
+
             <ul class="nav-links">
                 <li>
                     <a href="/Index.html">INICIO</a>
@@ -25,26 +31,248 @@
                     <a href="/templates/menu.html">MENU</a>
                 </li>
                 <li>
-                    <a href="">HACE TU PEDIDO</a>
+                    <a href="/templates/hacetupedido.html">HACE TU PEDIDO</a>
                 </li>
                 <li>
-                    <a href="">SUCURSALES</a>
+                    <a href="/templates/sucursales.html">SUCURSALES</a>
                 </li>
                 <li>
-                    <a href="">FRANQUICIAS</a>
+                    <a href="/templates/franquicias.html">FRANQUICIAS</a>
                 </li>
                 <li>
-                    <a href="">TRABAJA CON NOSOTROS</a>
+                    <a href="/templates/trabajaconnosotros.html">TRABAJA CON NOSOTROS</a>
                 </li>
                 <li>
-                    <a href="">MERCHANDISING</a>
+                    <a href="/templates/trabajaconnosotros.html">MERCHANDISING</a>
                 </li>
             </ul>
-    
-    
-    
+
+
+
         </nav>
-    
+
     </header>
-</body>
-</html>
+
+    <div class="box-gps">
+        <!-- caja en grid para los locales -->
+        <div class="boxes">
+            <!--primer local-->
+            <div class="box gps1" onclick="mostrar()">
+                <h2>Pilar</h2>
+                <img src="/static/img/location3.png" alt="simbolo lugar" width="30">Lorenzo López 523
+                <br>
+                <img src="/static/img/phone.png" alt="simbolo telefono" width="30">0230 442-6568
+                <br>
+                <img src="/static/img/clock.png" alt="simbolo reloj" width="30">11a.m.-3p.m.,6-11p.m.
+            </div>
+    
+            <!--segundo local-->
+            <div class="box gps2" onclick="mostrar2()">
+                <h2>Jose C Paz</h2>
+                <img src="/static/img/location3.png" alt="simbolo lugar" width="30">Av. Gaspar Campos 6420
+                <br>
+                <img src="/static/img/phone.png" alt="simbolo telefono" width="30">02320 424-586
+                <br>
+                <img src="/static/img/clock.png" alt="simbolo reloj" width="30">11a.m.-3p.m.,6-11p.m.
+            </div>
+    
+            <!--tercer local-->
+            <div class="box gps3" onclick="mostrar3()">
+                <h2>
+                    Manuel Alberti
+                </h2>
+                <img src="/static/img/location3.png" alt="simbolo lugar" width="30">Golf Club San Antonio De Areco 1715
+                <br>
+                <img src="/static/img/phone.png" alt="simbolo telefono" width="30"> 0348 421-8733
+                <br>
+                <img src="/static/img/clock.png" alt="simbolo reloj" width="30">11a.m.-3p.m.,6-11p.m.
+            </div>
+            <!--cuarto local-->
+            <div class="box gps4" onclick="mostrar4()">
+                <h2>
+                    San Miguel
+                </h2>
+                <img src="/static/img/location3.png" alt="simbolo lugar" width="30">Serrano 1665
+                <br>
+                <img src="/static/img/phone.png" alt="simbolo telefono" width="30"> 0348 421-8733
+                <br>
+                <img src="/static/img/clock.png" alt="simbolo reloj" width="30">11a.m.-3p.m.,6-11p.m.
+            </div>
+    
+            <!--quinto local-->
+            <div class="box gps5" id="box-gps5" onclick="mostrar5()">
+                <h2>
+                    Don Torcuato
+                </h2>
+                <img src="/static/img/location3.png" alt="simbolo lugar" width="30">Av. Marcelo Torcuato de Alvear 2556,
+                <br>
+                <img src="/static/img/phone.png" alt="simbolo telefono" width="30"> 0348 421-8733
+                <br>
+                <img src="/static/img/clock.png" alt="simbolo reloj" width="30">11a.m.-3p.m.,6-11p.m.
+                <br>
+            </div>
+            <!--ubicaciones gps -->
+            <!-- <div class="grid-elegir-ubicacion" id="ElegirUbicacion" style="display: block">
+                </div> -->
+        </div>
+    
+            <div class="grid-ubicaciones">
+                <div id="location1" style="display: none">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13158.890657185777!2d-58.93128201284176!3d-34.459187299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9cce2d681a67%3A0x5456d6b432605f3b!2sMi%20Gusto!5e0!3m2!1ses-419!2sar!4v1711824637361!5m2!1ses-419!2sar"
+                        width="1000" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                </div>
+    
+                <div id="location2" style="display: none">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11048.596748063095!2d-58.4505239243936!3d-34.58474993826824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5ab1e5c8aef%3A0x95693dcd264542f2!2sMi%20Gusto!5e0!3m2!1ses-419!2sar!4v1711824595537!5m2!1ses-419!2sar"
+                        width="1000" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                </div>
+    
+                <div id="location3" style="display: none">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52650.720005554416!2d-58.85500537304703!3d-34.435136536446535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9edc4274d6df%3A0x316244662a62f517!2sMi%20Gusto!5e0!3m2!1ses-419!2sar!4v1711824718677!5m2!1ses-419!2sar"
+                        width="1000" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                </div>
+    
+                <div id="location4" style="display: none">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26292.72814236925!2d-58.74764442568359!3d-34.53858839999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd13cf959d3d%3A0xc8e067c1535a6355!2sMi%20Gusto!5e0!3m2!1ses!2sar!4v1713301555099!5m2!1ses!2sar"
+                        width="1000" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                </div>
+    
+                <div id="location5" style="display: none">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26308.528287750098!2d-58.65937002568358!3d-34.488531599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbb350c65e0f3%3A0x4568102bf092633f!2sMi%20Gusto!5e0!3m2!1ses!2sar!4v1713301686232!5m2!1ses!2sar"
+                        width="1000" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <script>
+            var x = document.getElementById("location1");
+            var x2 = document.getElementById("location2")
+            var x3 = document.getElementById("location3")
+            var x4 = document.getElementById("location4")
+            var x5 = document.getElementById("location5")
+            var x6 = document.getElementById("ElegirUbicacion");
+            function mostrar() {
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    x2.style.display = "none";
+                    x3.style.display = "none";
+                    x4.style.display = "none";
+                    x5.style.display = "none";
+                    x6.style.display = "none";
+                } else {
+                    x.style.display = "none";
+                    x2.style.display = "none";
+                    x3.style.display = "none";
+                    x4.style.display = "none";
+                    x5.style.display = "none";
+                    x6.style.display = "block";
+                }
+            }
+            function mostrar2() {
+                if (x2.style.display === "none") {
+                    x.style.display = "none";
+                    x2.style.display = "block";
+                    x3.style.display = "none";
+                    x4.style.display = "none";
+                    x5.style.display = "none";
+                    x6.style.display = "none";
+                } else {
+                    x.style.display = "none";
+                    x2.style.display = "none";
+                    x3.style.display = "none";
+                    x4.style.display = "none";
+                    x5.style.display = "none";
+                    x6.style.display = "block";
+                }
+            }
+            function mostrar3() {
+                if (x3.style.display === "none") {
+                    x.style.display = "none";
+                    x2.style.display = "none";
+                    x3.style.display = "block";
+                    x4.style.display = "none";
+                    x5.style.display = "none";
+                    x6.style.display = "none";
+                } else {
+                    x.style.display = "none";
+                    x2.style.display = "none";
+                    x3.style.display = "none";
+                    x4.style.display = "none";
+                    x5.style.display = "none";
+                    x6.style.display = "block";
+                }
+            }
+            function mostrar4() {
+                if (x4.style.display === "none") {
+                    x.style.display = "none";
+                    x2.style.display = "none";
+                    x3.style.display = "none";
+                    x4.style.display = "block";
+                    x5.style.display = "none";
+                    x6.style.display = "none";
+                } else {
+                    x.style.display = "none";
+                    x2.style.display = "none";
+                    x3.style.display = "none";
+                    x4.style.display = "none";
+                    x5.style.display = "none";
+                    x6.style.display = "block";
+                }
+            }
+            function mostrar5() {
+                if (x5.style.display === "none") {
+                    x.style.display = "none";
+                    x2.style.display = "none";
+                    x3.style.display = "none";
+                    x4.style.display = "none";
+                    x5.style.display = "block";
+                    x6.style.display = "none";
+                } else {
+                    x.style.display = "none";
+                    x2.style.display = "none";
+                    x3.style.display = "none";
+                    x4.style.display = "none";
+                    x5.style.display = "none";
+                    x6.style.display = "block";
+                }
+            }
+
+        </script>
+    </div>
+    
+    <footer class="footer">
+    
+        <div class="redes">
+            <p>Encontranos en:</p>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+    
+    
+        <p>COPYRIGHT 2024 - CLUB DE EMPANADAS - TODOS LOS DERECHOS RESERVADOS - DESARROLLADO POR GRUPO15</p>
+    
+        <div></div>
+    
+    </footer>
+    
+    </body>
+    
+    </html>

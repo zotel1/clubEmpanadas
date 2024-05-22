@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="seccion hace tu pedido Club de empanadas">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/style/hacetupedido.css">
+    <title>Hace tu pedido</title>
+    <link rel="shortcut icon" href="/static/img/favicom/icons8-kawaii-taco-16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2da593c37d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <header class="header">
@@ -25,19 +28,19 @@
                     <a href="/templates/menu.html">MENU</a>
                 </li>
                 <li>
-                    <a href="">HACE TU PEDIDO</a>
+                    <a href="/templates/hacetupedido.html">HACE TU PEDIDO</a>
                 </li>
                 <li>
-                    <a href="">SUCURSALES</a>
+                    <a href="/templates/sucursales.html">SUCURSALES</a>
                 </li>
                 <li>
-                    <a href="">FRANQUICIAS</a>
+                    <a href="/templates/franquicias.html">FRANQUICIAS</a>
                 </li>
                 <li>
-                    <a href="">TRABAJA CON NOSOTROS</a>
+                    <a href="/templates/trabajaconnosotros.html">TRABAJA CON NOSOTROS</a>
                 </li>
                 <li>
-                    <a href="">MERCHANDISING</a>
+                    <a href="/templates/merchadising.html">MERCHANDISING</a>
                 </li>
             </ul>
     
@@ -46,5 +49,63 @@
         </nav>
     
     </header>
+
+    <main class="main-hace-tu-pedido">
+        <section class="formulario-pedidos">
+            <h1>HACE TU PEDIDO!</h1>
+    
+    
+            <form class="formulario" action="procesar_pedido.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+    
+                <label for="email">Correo electrónicos:</label>
+                <input type="email" id="email" name="email" required><br><br>
+    
+                <label for="telefono">Teléfonos:</label>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+    
+                <label for="carne">Empanadas Chaqueñas:</label>
+                <input type="number" id="carne" name="carne" min="0" max="100"><br><br>
+    
+                <label for="pollo">Empanadas de Jujeñas:</label>
+                <input type="number" id="pollo" name="pollo" min="0" max="100"><br><br>
+    
+                <label for="queso">Empanadas de Salteñas:</label>
+                <input type="number" id="queso" name="queso" min="0" max="100"><br><br>
+    
+                <label for="jamon">Empanadas de Santiagueñas:</label>
+                <input type="number" id="jamon" name="jamon" min="0" max="100"><br><br>
+    
+                <label for="verdura">Empanadas de Tucumanas:</label>
+                <input type="number" id="verdura" name="verdura" min="0" max="100"><br><br>
+    
+                <label for="comentarios">Comentarios adicionales:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+    
+                <input type="submit" value="Enviar Pedido">
+    
+            </form>
+
+            <script>
+                function validarFormulario() {
+                   
+                    let nombre = document.getElementById('nombre');
+                    let email = document.getElementById('email');
+                    let telefono = document.getElementById('telefono');
+        
+                    
+                    if (nombre.value.trim() === '' || email.value.trim() === '' || telefono.value.trim() === '') {
+                        alert('Por favor, completa todos los campos obligatorios.');
+                        return false; 
+                    }
+        
+                  
+                    return true;
+                }
+            </script>
+    
+        </section>
+    </main>
 </body>
 </html>

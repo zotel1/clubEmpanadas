@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" seccion trabaja con nosotros Club de empanadas">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/style/trabajaconnosotros.css">
+    <title>Hace tu pedido</title>
+    <link rel="shortcut icon" href="/static/img/favicom/icons8-kawaii-taco-16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2da593c37d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <header class="header">
@@ -19,25 +22,25 @@
     
             <ul class="nav-links">
                 <li>
-                    <a href="/index.html">INICIO</a>
+                    <a href="/Index.html">INICIO</a>
                 </li>
                 <li>
                     <a href="/templates/menu.html">MENU</a>
                 </li>
                 <li>
-                    <a href="">HACE TU PEDIDO</a>
+                    <a href="/templates/hacetupedido.html">HACE TU PEDIDO</a>
                 </li>
                 <li>
-                    <a href="">SUCURSALES</a>
+                    <a href="/templates/sucursales.html">SUCURSALES</a>
                 </li>
                 <li>
-                    <a href="">FRANQUICIAS</a>
+                    <a href="/templates/franquicias.html">FRANQUICIAS</a>
                 </li>
                 <li>
-                    <a href="">TRABAJA CON NOSOTROS</a>
+                    <a href="/templates/trabajaconnosotros.html">TRABAJA CON NOSOTROS</a>
                 </li>
                 <li>
-                    <a href="">MERCHANDISING</a>
+                    <a href="/templates/merchadising.html">MERCHANDISING</a>
                 </li>
             </ul>
     
@@ -46,5 +49,49 @@
         </nav>
     
     </header>
+
+    <main class="main-trabaja-con-nosotros">
+        <section class="formulario-cv">
+            <img src="/static/img/trabajaconnosotros.png" alt="">
+            <h1>SUBIR CURRICULUM</h1>
+            <h3>¡Únete a nuestro equipo en la cadena de empanadas más ricas!</h3>
+            <p>Estamos buscando personas entusiastas y trabajadoras para unirse a nuestro equipo en diferentes roles. Si
+                tienes habilidades culinarias, un excelente servicio al cliente y una actitud positiva, ¡queremos conocerte!
+            </p>
+            <br><br>
+    
+            <form action="procesar_curriculum.php" method="POST" enctype="multipart/form-data">
+                <label for="trabajoGastronomia">¿Has trabajado previamente en gastronomía?</label>
+                <input type="checkbox" id="trabajoGastronomia" name="trabajoGastronomia" value="Si">
+                <label for="trabajoGastronomia">Sí</label>
+                <input type="checkbox" id="noTrabajoGastronomia" name="trabajoGastronomia" value="No">
+                <label for="noTrabajoGastronomia">No</label><br><br>
+    
+                <label for="experienciaGastronomia">Si la respuesta es sí, ¿cuánta años de experiencia tenes?</label>
+                <input type="number" id="experienciaGastronomia" name="experienciaGastronomia" min="0"><br><br>
+    
+                <label for="cv">Selecciona tu currículum:</label>
+                <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required><br><br>
+    
+                <input type="submit" value="Subir Currículum">
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+    
+        <div class="redes">
+            <p>Encontranos en:</p>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+    
+    
+        <p>COPYRIGHT 2024 - CLUB DE EMPANADAS - TODOS LOS DERECHOS RESERVADOS - DESARROLLADO POR GRUPO15</p>
+    
+        <div></div>
+    
+    </footer>
 </body>
 </html>
