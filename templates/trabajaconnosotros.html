@@ -48,24 +48,25 @@
             <img src='../static/img/trabajaconnosotros.png' alt="trabaja con nosotros dale">
             <h1>SUBIR CURRICULUM</h1>
             <h3>¡Únete a nuestro equipo en la cadena de empanadas más ricas!</h3>
-            <p>Estamos buscando personas entusiastas y trabajadoras para unirse a nuestro equipo en diferentes roles. Si
-                tienes habilidades culinarias, un excelente servicio al cliente y una actitud positiva, ¡queremos conocerte!
-            </p>
+            <p>Estamos buscando personas entusiastas y trabajadoras para unirse a nuestro equipo en diferentes roles. Si tienes
+                habilidades culinarias, un excelente servicio al cliente y una actitud positiva, ¡queremos conocerte!</p>
             <br><br>
-    
-            <form action="procesar_curriculum.php" method="POST" enctype="multipart/form-data">
+            <form id="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br><br>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido"><br><br>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email"><br><br>
                 <label for="trabajoGastronomia">¿Has trabajado previamente en gastronomía?</label>
                 <input type="checkbox" id="trabajoGastronomia" name="trabajoGastronomia" value="Si">
                 <label for="trabajoGastronomia">Sí</label>
                 <input type="checkbox" id="noTrabajoGastronomia" name="trabajoGastronomia" value="No">
                 <label for="noTrabajoGastronomia">No</label><br><br>
-    
-                <label for="experienciaGastronomia">Si la respuesta es sí, ¿cuánta años de experiencia tenes?</label>
+                <label for="experienciaGastronomia">Si la respuesta es sí, ¿cuántos años de experiencia tienes?</label>
                 <input type="number" id="experienciaGastronomia" name="experienciaGastronomia" min="0"><br><br>
-    
                 <label for="cv">Selecciona tu currículum:</label>
-                <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required><br><br>
-    
+                <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx"><br><br>
                 <input type="submit" value="Subir Currículum">
             </form>
         </section>
@@ -86,5 +87,6 @@
         <div></div>
     
     </footer>
+    <script src='../static/js/script.js'></script>
 </body>
 </html>
