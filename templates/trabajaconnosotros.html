@@ -59,12 +59,14 @@
                 <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" name="email"><br><br>
                 <label for="trabajoGastronomia">¿Has trabajado previamente en gastronomía?</label>
-                <input type="checkbox" id="trabajoGastronomia" name="trabajoGastronomia" value="Si">
-                <label for="trabajoGastronomia">Sí</label>
-                <input type="checkbox" id="noTrabajoGastronomia" name="trabajoGastronomia" value="No">
-                <label for="noTrabajoGastronomia">No</label><br><br>
-                <label for="experienciaGastronomia">Si la respuesta es sí, ¿cuántos años de experiencia tienes?</label>
-                <input type="number" id="experienciaGastronomia" name="experienciaGastronomia" min="0"><br><br>
+                <input type="radio" id="trabajoGastronomiaSi" name="trabajoGastronomia" value="Si">
+                <label for="trabajoGastronomiaSi">Sí</label>
+                <input type="radio" id="trabajoGastronomiaNo" name="trabajoGastronomia" value="No">
+                <label for="trabajoGastronomiaNo">No</label><br><br>
+                <div id="experienciaGastronomiaContainer" style="display: none;">
+                    <label for="experienciaGastronomia">¿Cuántos años de experiencia tienes?</label>
+                    <input type="number" id="experienciaGastronomia" name="experienciaGastronomia" min="0"><br><br>
+                </div>
                 <label for="cv">Selecciona tu currículum:</label>
                 <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx"><br><br>
                 <input type="submit" value="Subir Currículum">

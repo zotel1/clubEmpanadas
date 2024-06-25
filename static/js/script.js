@@ -1,7 +1,16 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var formulario = document.getElementById("formulario");
 
+    formulario.addEventListener("submit", function (event) {
+        event.preventDefault();
+        validarFormulario();
+    });
 
     var nombreInput = document.getElementById("nombre");
     var apellidoInput = document.getElementById("apellido");
+    var trabajoGastronomiaSi = document.getElementById("trabajoGastronomiaSi");
+    var trabajoGastronomiaNo = document.getElementById("trabajoGastronomiaNo");
+    var experienciaGastronomiaContainer = document.getElementById("experienciaGastronomiaContainer");
 
     nombreInput.addEventListener("input", function () {
         this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '');
@@ -10,6 +19,15 @@
     apellidoInput.addEventListener("input", function () {
         this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '');
     });
+
+    trabajoGastronomiaSi.addEventListener("change", function () {
+        experienciaGastronomiaContainer.style.display = 'block';
+    });
+
+    trabajoGastronomiaNo.addEventListener("change", function () {
+        experienciaGastronomiaContainer.style.display = 'none';
+    });
+
 
     function validarFormulario() {
         var nombre = document.getElementById("nombre").value;
@@ -31,6 +49,7 @@
             alert("Por favor, ingrese un apellido.");
             return;
         }
+
 
         if (!email || !emailRegex.test(email)) {
             alert("Por favor, ingrese un correo electrónico válido.");
@@ -55,33 +74,21 @@
         limpiarFormulario();
     }
 
+
     function limpiarFormulario() {
         document.getElementById('nombre').value = '';
         document.getElementById('apellido').value = '';
         document.getElementById('email').value = '';
-        document.querySelector('input[name="trabajoGastronomia"]:checked').checked = false;
+        var radioButtons = document.querySelectorAll('input[name="trabajoGastronomia"]');
+        radioButtons.forEach(function (radio) {
+            radio.checked = false;
+        });
         document.getElementById('experienciaGastronomia').value = '';
+        experienciaGastronomiaContainer.style.display = 'none';
         document.getElementById('cv').value = '';
         alert("¡Información enviada!");
-    };
-
-
-/*function validarFormulario() {
-
-    let nombre = document.getElementById('nombre');
-    let email = document.getElementById('email');
-    let telefono = document.getElementById('telefono');
-
-
-    if (nombre.value.trim() === '' || email.value.trim() === '' || telefono.value.trim() === '') {
-        alert('Por favor, completa todos los campos obligatorios.');
-        return false;
     }
-
-
-    return true;
-} */
-
+})
 
 // script sucursales
 
