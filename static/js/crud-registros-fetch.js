@@ -90,7 +90,7 @@ async function saveRegistro(){
   }
   
   const formRegistro = document.querySelector('#form-registro');
-  formMovie.reset();
+  formRegistro.reset();
   Swal.fire({
     title: 'Exito!',
     text: result.message,
@@ -137,7 +137,7 @@ function deleteRegistro(id){
   }).then(async (result) => {
       if (result.isConfirmed) {
           let response = await fetchData(`${BASEURL}/api/registros/${id}`, 'DELETE');
-        showMovies();
+        showRegistros();
         Swal.fire(response.message, "", "success");
       }
   });
