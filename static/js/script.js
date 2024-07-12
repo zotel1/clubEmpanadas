@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function validarFormulario() {
         var nombre = document.getElementById("nombre").value;
         var apellido = document.getElementById("apellido").value;
-        var email = document.getElementById("email").value;
+        var email = document.getElementById("correo").value;
         var trabajoGastronomia = document.querySelector('input[name="trabajoGastronomia"]:checked');
         var experienciaGastronomia = document.getElementById("experienciaGastronomia").value;
         var cv = document.getElementById("cv").files[0];

@@ -30,6 +30,20 @@ async function fetchData(url, method, data = null) {
   }
 }
 
+function limpiarFormulario() {
+    document.getElementById('nombre').value = '';
+    document.getElementById('apellido').value = '';
+    document.getElementById('email').value = '';
+    var radioButtons = document.querySelectorAll('input[name="trabajoGastronomia"]');
+    radioButtons.forEach(function (radio) {
+        radio.checked = false;
+    });
+    document.getElementById('experienciaGastronomia').value = '';
+    experienciaGastronomiaContainer.style.display = 'none';
+    document.getElementById('cv').value = '';
+    alert("¡Información enviada!");
+}
+
 /**
  * Función para comunicarse con el servidor para poder Crear o Actualizar
  * un registro de pelicula
@@ -43,6 +57,7 @@ async function saveRegistro(){
   const exp = document.querySelector('#trabajoGastronomiaSi').value;
   const expno = document.querySelector('#trabajoGastronomiaNo').value;
   const curriculum = document.querySelector('#curriculum').value;
+
 
   //VALIDACION DE FORMULARIO
   if (!nombre || !apellido || !correo ) {
@@ -83,6 +98,7 @@ async function saveRegistro(){
     confirmButtonText: 'Cerrar'
   })
   showRegistros();
+    limpiarFormulario();
 }
 
 
