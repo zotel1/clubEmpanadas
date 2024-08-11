@@ -382,6 +382,25 @@ nav {
     max-width: 1200px; /* Limitar el ancho máximo si es necesario */
 }
 
+.menu .btn {
+    margin-inline: auto;
+    margin-block-start: 26px;
+}
+
+.btn {
+    position: relative;
+    color: var(--gold-crayola);
+    font-size: var(--fontSize-label-2);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing-5);
+    max-width: max-content;
+    border: 2px solid var(--gold-crayola);
+    padding: 12px 45px;
+    overflow: hidden;
+    z-index: 1;
+}
+
 /* @media (max-width:600px) {
     .boxes>*{
         grid-column-end: 1px span;
